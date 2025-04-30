@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  margin: 50px 0;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.container {
+  width: 90%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.container h1 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.input:focus {
+  border-color: #4e54c8;
+  box-shadow: 0 0 5px rgba(78, 84, 200, 0.5);
+}
+.add {
+  padding: 12px 20px;
+  font-size: 15px;
+  color: #fff;
+  background: #4e54c8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.add:hover {
+  background: #8f94fb;
+  transform: scale(1.05);
+}
+.tasks {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.task {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  line-height: 1.5;
+}
+.task:hover {
+  background: #f1f1f1;
+}
+.task.done {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+.task span {
+  background: #e74c3c;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.task span:hover {
+  background: #c0392b;
+}
+.toggle-dark-mode {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 12px;
+  background: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 360px;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.toggle-dark-mode:hover {
+  background: #34495e;
+  transform: scale(1.05);
+}
+.task-counter {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4e54c8;
+  background: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid #4e54c8;
+  margin-top: 10px;
+  text-align: center;
+}
+.task-counter:hover {
+  background: #4e54c8;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+/* Dark Mode */
+body.dark-mode {
+  background: linear-gradient(90deg, #2c3e50, #34495e);
+  color: #ecf0f1;
+}
+body.dark-mode .container {
+  background: #3b4a59;
+  color: #ecf0f1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+body.dark-mode .task-counter {
+  color: #ffffff;
+  border: 1px solid #8f94fb;
+}
+body.dark-mode .task-counter:hover {
+  background: #8f94fb;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+body.dark-mode h1 {
+  color: #ffffff;
+}
+body.dark-mode .input {
+  background: #4a5a6a;
+  color: #ecf0f1;
+  border: 1px solid #5a6b7c;
+}
+body.dark-mode .input::placeholder {
+  color: #bdc3c7;
+}
+body.dark-mode .add {
+  background: #4e54c8;
+  color: #ffffff;
+}
+body.dark-mode .add:hover {
+  background: #8f94fb;
+}
+body.dark-mode .task {
+  background: #4a5a6a;
+  color: #ecf0f1;
+  border: 1px solid #5a6b7c;
+}
+body.dark-mode .task span {
+  background: #e74c3c;
+  color: #ffffff;
+}
+body.dark-mode .task span:hover {
+  background: #ff6f61;
+}
+body.dark-mode .toggle-dark-mode {
+  background: #4e54c8;
+  color: #ffffff;
+}
+body.dark-mode .toggle-dark-mode:hover {
+  background: #8f94fb;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  .input,
+  .add,
+  .toggle-dark-mode {
+    font-size: 13px;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 600px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  .input {
+    font-size: 18px;
+    padding: 14px;
+  }
+  .add {
+    font-size: 16px;
+    padding: 14px 24px;
+  }
+  .task {
+    font-size: 16px;
+    padding: 14px;
+  }
+  .toggle-dark-mode {
+    font-size: 15px;
+    padding: 14px;
+  }
+}

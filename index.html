@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMaster - Interactive To Do List App</title>
+    <link rel="stylesheet" href="./main.css" />
+    <meta name="description" content="TaskMaster is an interactive and modern To-Do List App designed to help you manage your tasks efficiently and effectively." />
+  </head>
+  <body>
+    <div class="container">
+      <h1>TaskMaster</h1>
+      <div class="form">
+        <label for="taskInput"></label>
+        <input id="taskInput" type="text" class="input" placeholder="Enter a new task..." />
+        <input type="submit" class="add" value="Add Task" aria-label="Add a new task" />
+      </div>
+      <div class="task-counter">Tasks: 0</div>
+      <div class="tasks"></div>
+      <button class="toggle-dark-mode">Dark Mode</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
