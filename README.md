@@ -10,7 +10,7 @@ Tasks persist even after browser closure using local storage.
 - Smooth interactions
 
 ## Live Demo
-[Visit App](#)
+[Visit App](https://moradalsahybi.github.io/taskmaster-app/)
 
 ## Screenshots
 (Add screenshots if you want.)
